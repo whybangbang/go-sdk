@@ -12,6 +12,7 @@ import (
 
 func (up *UpYun) doHTTPRequest(method, url string, headers map[string]string,
 	body io.Reader) (resp *http.Response, err error) {
+	fmt.Println("doHTTPRequest", "url", url, "method", method)
 	req, err := http.NewRequest(method, url, body)
 	if err != nil {
 		return nil, err

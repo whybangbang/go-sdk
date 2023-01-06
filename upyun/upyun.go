@@ -1,6 +1,7 @@
 package upyun
 
 import (
+	"fmt"
 	"net"
 	"net/http"
 	"time"
@@ -47,6 +48,7 @@ func NewUpYun(config *UpYunConfig) *UpYun {
 	up.httpc = &http.Client{
 		Transport: &http.Transport{
 			Dial: func(network, addr string) (c net.Conn, err error) {
+				fmt.Println("net", network, "addr", addr)
 				return net.DialTimeout(network, addr, defaultConnectTimeout)
 			},
 		},
