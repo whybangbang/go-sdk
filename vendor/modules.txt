@@ -1,0 +1,2 @@
+# github.com/upyun/go-sdk/v3 v3.0.3
+github.com/upyun/go-sdk/v3/upyun
